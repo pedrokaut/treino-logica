@@ -1,11 +1,14 @@
 #include <iostream> 
- 
+
 using namespace std; 
- 
+
 int main() { 
     int x = 10; 
-    cout << "Valor de x: " << x << endl; 
-    cout << "Endereço de x: " << &x << endl; 
- 
+    
+    while (1) {
+        cout << "Valor de x: " << x << endl; 
+        cout << "Endereo de x: " << &x << endl; 
+    }
+
     return 0; 
 }

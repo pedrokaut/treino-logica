@@ -1,26 +1,26 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
-struct grupo{
+
+// Definição da struct peixe
+struct peixe {
     char nome[20];
-    int idade;
-    float media;
+    float peso;
+    int tamanho;
 };
-int main(){
-    grupo alunos[3];
-    int i;
-    for(i=1;i<4;i++){
-    cout << "digite o nome do aluno: "<< i << endl;
-    cin >> alunos[i].nome;
-    cout << "digite a idade do aluno: "<< i << endl;
-    cin >> alunos[i].idade;
-    cout << "digite a media do aluno: "<< i << endl;
-    cin >> alunos[i].media;
-    cout << "nome: " << alunos[i].nome << endl;
-    cout << "idade: " << alunos[i].idade << endl;
-    cout << "media: " << alunos[i].media << endl;
-    }
-    
 
+// Função que recebe um peixe por valor
+void exibirPeixe(peixe p) {
+    cout << "Nome: " << p.nome << endl;
+    cout << "Peso: " << p.peso << " kg" << endl;
+    cout << "Tamanho: " << p.tamanho << " cm" << endl;
+    cout << "---------------------------" << endl;
+}
 
-return 0;
+int main() {
+    peixe meuPeixe = {"Salmão", 12.5, 40}; // Criando um peixe
+
+    exibirPeixe(meuPeixe); // Chamando a função
+
+    return 0;
 }
